@@ -106,16 +106,22 @@
         z-index: 1;
 
         transform: translateY(-50%);
-
+ animation: slide-back 0.4s forwards;   
 
 
 
     }
 
     .light #switch button {
-        right:  0px;
-        left: initial;
+        animation: slide-ing 0.4s forwards;
     }
+
+        #switch button:hover {
+outline: 8px solid var(--highlight-color);
+
+        }
+
+
 
      #switch button:hover {
         background-color: var(--highlight-color);      
@@ -219,3 +225,28 @@
         color: var(--text-color);
         padding: 16px 0;
     }
+
+    /* animação */
+
+    @keyframes slide-ing {
+
+from { left: 0;
+
+}
+to { left: 50%;
+
+ }
+    }
+
+    @keyframes slide-back {
+
+from { left: 50%;}
+
+to { left: 0;}
+
+
+
+    }
+
+
+        
